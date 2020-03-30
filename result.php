@@ -30,7 +30,8 @@
         $filepath = "images/" . $file['name'];
         if(move_uploaded_file($file['tmp_name'], $filepath)) 
         {
-        echo "<img src=".$filepath." height=200 width=300 />";
+        echo '<img src='.$filepath.' height=150 width=150 id="image" />';
+        echo '<input type="text" value="Loading..." id="result" />';
         } 
     }
     }
@@ -38,5 +39,7 @@
     // echo $files;
 
 ?>
+<script> const imager = document.getElementById('image'); </script>
+<script src="js/script.js"></script>
 </body>
 </html>
